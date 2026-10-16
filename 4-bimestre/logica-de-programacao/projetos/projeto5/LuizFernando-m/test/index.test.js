@@ -21,17 +21,17 @@ const {
   caixasNecessarias,
   situacaoMeta,
   resumo
-} = executar(["Turno Express", "13", "5", "4"])
+} = executar(["Turno Tarde", "16", "7", "4"])
 
 test("RF01 - deve registrar os dados do turno", () => {
-  expect(nomeTurno).toBe("Turno Express")
-  expect(meta).toBe(13)
-  expect(producaoInicial).toBe(5)
+  expect(nomeTurno).toBe("Turno Tarde")
+  expect(meta).toBe(16)
+  expect(producaoInicial).toBe(7)
   expect(pecasPorCaixa).toBe(4)
 })
 
 test("RF02 - deve produzir itens com while até atingir a meta", () => {
-  expect(producaoFinal).toBe(13)
+  expect(producaoFinal).toBe(16)
 })
 
 test("RF03 - deve calcular as caixas necessárias com do...while", () => {
@@ -44,7 +44,7 @@ test("RF04 - deve informar a situação da meta com ternário", () => {
 
 test("RF05 - deve gerar um resumo com os dados do turno", () => {
   expect(typeof resumo).toBe("string")
-  expect(resumo).toContain("Turno Express")
+  expect(resumo).toContain("Turno Tarde")
   expect(resumo).toContain("Meta atingida")
 })
 
